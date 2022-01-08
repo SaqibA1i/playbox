@@ -3,7 +3,7 @@
 @import "./components/navbar.scss";
 @import "./components/home.scss";
 @import "./components/entry.scss";
-
+@import "./components//bottomSection.scss";
 html {
   background: #333;
   //   background-image: url("../files/temp.jpg");
@@ -17,6 +17,7 @@ html {
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
+  aspect-ratio: 16/9;
 }
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -36,7 +37,7 @@ html {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #00478127;
+  background-color: transparent;
   border-radius: 50px;
   border: 3px solid transparent;
 }
@@ -61,6 +62,6 @@ html {
     opacity: 0.5;
   }
   .corner-fade {
-    opacity: 0.5;
+    opacity: 0.8;
   }
 }

@@ -3,20 +3,27 @@
   flex-direction: row;
   flex-wrap: nowrap;
   position: relative;
+  p {
+    color: transparent;
+    padding: 0;
+    width: 0;
+  }
   .game-name {
     color: $white;
     white-space: nowrap;
     position: absolute;
-    top: 11vh;
+    top: 5vw;
     left: 10.5vw;
+    font-weight: 300;
     z-index: 100;
     font-size: 1.5vw;
+    transition: opacity 0.7s ease-in-out;
   }
 
   .entry-container {
     margin: 0.1vw;
-    border: 0.2vw solid transparent;
-    border-radius: 12px;
+    border: 0.1vw solid transparent;
+    border-radius: 1.3vw;
     transition: border 0.3s ease-in-out;
     display: flex;
     flex-direction: row;
@@ -27,26 +34,26 @@
       min-height: 6vw;
       max-width: 6vw;
       max-height: 6vw;
-      border-radius: 10px;
+      border-radius: 1vw;
       margin: 0.2vw;
-      transition: max-width 0.3s ease-in-out, max-height 0.3s ease-in-out,
-        min-width 0.3s ease-in-out, min-height 0.3s ease-in-out;
-      &:hover {
-        min-width: 9vw;
-        min-height: 9vw;
-        max-width: 9vw;
-        max-height: 9vw;
-        transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out;
-      }
+      transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out,
+        max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
     }
-
-    &:hover {
-      border-radius: 13px;
-      border: 0.2vw solid $white;
+    .img-hover {
+      min-width: 9vw;
+      min-height: 9vw;
+      max-width: 9vw;
+      max-height: 9vw;
+      transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out,
+        max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
     }
   }
-
+  .entry-hover {
+    border-radius: 1.3vw;
+    border: 0.1vw solid $white;
+  }
   .hide {
-    display: none;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
   }
 }

@@ -4,19 +4,37 @@
   height: 10vh;
 
   .left-section {
-    margin-left: 20px;
+    margin-left: 3vw;
     color: $white;
     p {
       font-size: 2vw;
     }
   }
   .right-section {
-    margin-right: 20px;
+    margin-right: 3vw;
     color: $white;
     width: 30vw;
     @include flexCenter(row);
+    align-items: center;
     span {
       font-size: 2vw;
+      display: flex;
+      align-items: center;
+    }
+    input {
+      width: 12vw;
+      height: 2vw;
+      border-radius: 2vw;
+      background-color: rgba(51, 51, 51, 0.459);
+      backdrop-filter: blur(4px);
+      border: 0;
+      font-size: 0.8vw;
+      color: $white;
+      padding: 0vw 1vw;
+      &::placeholder {
+        font-size: 0.8vw;
+        color: $white;
+      }
     }
   }
 }
