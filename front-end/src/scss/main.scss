@@ -1,0 +1,66 @@
+@import "./utilities/variables.scss";
+@import "./utilities/mixins.scss";
+@import "./components/navbar.scss";
+@import "./components/home.scss";
+@import "./components/entry.scss";
+
+html {
+  background: #333;
+  //   background-image: url("../files/temp.jpg");
+  background-size: cover;
+  // https://stackoverflow.com/questions/826782/how-to-disable-text-selection-highlighting?rq=1
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #545454 transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #00478127;
+  border-radius: 50px;
+  border: 3px solid transparent;
+}
+
+.App {
+  min-width: 100%;
+  min-height: 100%;
+  .bg,
+  .fade,
+  .corner-fade {
+    max-width: 100vw;
+    max-height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+  }
+  .fade {
+    transform: rotate(180deg);
+    opacity: 0.5;
+  }
+  .corner-fade {
+    opacity: 0.5;
+  }
+}

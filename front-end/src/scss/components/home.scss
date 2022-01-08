@@ -1,0 +1,9 @@
+.home {
+  @include flexCenter(row);
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow-x: scroll;
+  height: 17vw;
+  padding-top: 2vh;
+  margin-left: 7vw;
+}

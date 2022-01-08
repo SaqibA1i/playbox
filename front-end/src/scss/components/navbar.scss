@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  @include flexCenter(row);
+  height: 10vh;
+
+  .left-section {
+    margin-left: 20px;
+    color: $white;
+    p {
+      font-size: 2vw;
+    }
+  }
+  .right-section {
+    margin-right: 20px;
+    color: $white;
+    width: 30vw;
+    @include flexCenter(row);
+    span {
+      font-size: 2vw;
+    }
+  }
+}

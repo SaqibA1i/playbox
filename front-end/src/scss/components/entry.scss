@@ -1,0 +1,52 @@
+.entry-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  .game-name {
+    color: $white;
+    white-space: nowrap;
+    position: absolute;
+    top: 11vh;
+    left: 10.5vw;
+    z-index: 100;
+    font-size: 1.5vw;
+  }
+
+  .entry-container {
+    margin: 0.1vw;
+    border: 0.2vw solid transparent;
+    border-radius: 12px;
+    transition: border 0.3s ease-in-out;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    img {
+      min-width: 6vw;
+      min-height: 6vw;
+      max-width: 6vw;
+      max-height: 6vw;
+      border-radius: 10px;
+      margin: 0.2vw;
+      transition: max-width 0.3s ease-in-out, max-height 0.3s ease-in-out,
+        min-width 0.3s ease-in-out, min-height 0.3s ease-in-out;
+      &:hover {
+        min-width: 9vw;
+        min-height: 9vw;
+        max-width: 9vw;
+        max-height: 9vw;
+        transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out;
+      }
+    }
+
+    &:hover {
+      border-radius: 13px;
+      border: 0.2vw solid $white;
+    }
+  }
+
+  .hide {
+    display: none;
+  }
+}
