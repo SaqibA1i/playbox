@@ -4,13 +4,23 @@
   top: 5vw;
   width: 20vw;
   @include flexCenter(column);
-  img {
-    position: relative;
+  .logo {
     margin-left: 10vw;
-    max-height: 23vw;
+    min-height: 15vw;
+    max-height: 15vw;
     min-width: 23vw;
     max-width: 23vw;
+    display: flex;
+    align-items: end;
+    position: relative;
+    img {
+      position: absolute;
+      max-height: 23vw;
+      min-width: 23vw;
+      max-width: 23vw;
+    }
   }
+
   .play {
     background-color: rgba(51, 51, 51, 0.459);
     backdrop-filter: blur(10px);
@@ -22,5 +32,9 @@
     text-align: center;
     font-size: 1.5vw;
     color: $white;
+    &:focus {
+      cursor: pointer;
+      border: 0.1vw solid $white;
+    }
   }
 }

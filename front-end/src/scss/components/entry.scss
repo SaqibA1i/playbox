@@ -17,17 +17,17 @@
     font-weight: 300;
     z-index: 100;
     font-size: 1.5vw;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity $anim_del_2 ease-in-out;
   }
 
   .entry-container {
     margin: 0.1vw;
+    height: fit-content;
     border: 0.1vw solid transparent;
     border-radius: 1.3vw;
-    transition: border 0.3s ease-in-out;
+    transition: border $anim_del_2 ease-in-out;
     display: flex;
     flex-direction: row;
-    align-items: center;
     cursor: pointer;
     img {
       min-width: 6vw;
@@ -36,24 +36,28 @@
       max-height: 6vw;
       border-radius: 1vw;
       margin: 0.2vw;
-      transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out,
-        max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
+      transition: min-width $anim_del_1 ease-in-out,
+        min-height $anim_del_1 ease-in-out, max-width $anim_del_1 ease-in-out,
+        max-height $anim_del_1 ease-in-out;
     }
     .img-hover {
       min-width: 9vw;
       min-height: 9vw;
       max-width: 9vw;
       max-height: 9vw;
-      transition: min-width 0.3s ease-in-out, min-height 0.3s ease-in-out,
-        max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
+      transition: min-width $anim_del_1 ease-in-out,
+        min-height $anim_del_1 ease-in-out, max-width $anim_del_1 ease-in-out,
+        max-height $anim_del_1 ease-in-out;
     }
   }
   .entry-hover {
     border-radius: 1.3vw;
     border: 0.1vw solid $white;
+    transition: border $anim_del_2 ease-in-out;
+    transition-delay: 0.3s;
   }
   .hide {
     opacity: 0;
-    transition: opacity 0.7s ease-in-out;
+    transition: opacity 0.1s ease-in-out;
   }
 }

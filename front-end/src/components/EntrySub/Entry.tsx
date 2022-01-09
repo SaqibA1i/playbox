@@ -35,6 +35,7 @@ export default function Entry(Props: entryProps) {
         <img
           className={currGame === Props.gameName ? "entry img-hover" : "entry"}
           onClick={() => {
+            console.log(Props.gameName);
             setCurr(Props.gameName);
           }}
           src={imageProp}

@@ -2,7 +2,7 @@
   @include flexCenter(row);
   justify-content: flex-start;
   align-items: flex-start;
-  overflow-x: scroll;
+  overflow-x: hidden;
   height: 17vw;
   padding-top: 2vh;
 }

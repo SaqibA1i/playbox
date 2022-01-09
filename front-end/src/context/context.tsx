@@ -9,6 +9,7 @@ export type playBox = {
   setGameList: (games: Game) => void;
   currGame: string;
   setCurr: (name: string) => void;
+  prevGame: string;
 };
 
 export const Context = React.createContext<playBox | undefined>(undefined);

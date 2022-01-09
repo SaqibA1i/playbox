@@ -1,26 +1,38 @@
 import { useEffect, useState } from "react";
 import { useGameContext } from "../../context/context";
-import clearLogo from "../../files/images/clearLogo/1.png";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { animateFadeZoomIn } from "../../utilities/helperFunctions";
 
 export default function BottomBar() {
-  const [logo, setLogo] = useState<string>("");
-  const { currGame } = useGameContext()!;
+  const [currBg, setCurrBg] = useState<string>("");
+  const [prevBg, setPrevBg] = useState<string>("");
 
-  const loadImage = async () => {
+  const { currGame, prevGame } = useGameContext()!;
+
+  const loadImage = async (game: string, isCurr: boolean) => {
     const tempImage = await require("../../files/images/clearLogo/" +
-      currGame +
+      game +
       ".png");
-    setLogo(tempImage);
+    if (isCurr) {
+      setCurrBg(tempImage);
+    } else {
+      setPrevBg(tempImage);
+    }
   };
 
   useEffect(() => {
-    loadImage();
+    loadImage(currGame, true);
+    animateFadeZoomIn("currLogo", "fadeAnim", 400);
   }, [currGame]);
 
   return (
     <div className="bottom-section">
-      <img src={logo} />
-      <div className="play">Play</div>
+      <div className="logo">
+        <img className="currLogo" src={currBg} />
+      </div>
+      <div className="play" tabIndex={0}>
+        Play
+      </div>
     </div>
   );
 }

@@ -1,0 +1,28 @@
+.carousel.carousel-slider {
+  position: relative;
+  margin: 0;
+  overflow: visible;
+}
+.carousel-root {
+  max-width: 6.8vw;
+  margin-left: 7vw;
+}
+.carousel .slider-wrapper {
+  overflow: visible;
+  margin: auto;
+  width: 100%;
+  transition: height 0.15s ease-in;
+}
+.carousel .control-dots {
+  display: none;
+}
+
+.carousel .carousel-status {
+  display: none;
+}
+
+.carousel .slide {
+  min-width: inherit;
+  margin: 0;
+  text-align: center;
+}

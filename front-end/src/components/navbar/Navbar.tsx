@@ -14,7 +14,11 @@ export default function Navbar() {
         newGameList[g] = ogGameList[g];
       }
     }
+
     setGameList(newGameList);
+    let statusElement = document.getElementsByClassName("control-dots")[0]
+      .childNodes[0] as HTMLBodyElement;
+    statusElement && statusElement.click();
   };
   return (
     <div className="navbar">
